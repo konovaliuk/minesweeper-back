@@ -1,10 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="api" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00dab508-48ae-480a-abac-622134fd1086" name="Changes" comment="" />
+    <list default="true" id="00dab508-48ae-480a-abac-622134fd1086" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_slf4j_slf4j_api_1_7_36_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/9/79326266ba3ce9551030824986203187a03dba28" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/88183f55db7e754f89d0d25ef0756a3ed4db4fe2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b11dc4e4017663b4db77a98e5fd2d486e7f21379" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/util/exception/InvalidRequestException.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/util/exception/NullRefreshedTokenException.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/web/filter/JWTRegFilter.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/14c1554e-d60d-4c6c-9ec6-0248d7a72d5f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/14c1554e-d60d-4c6c-9ec6-0248d7a72d5f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_typesafe_scala_logging_scala_logging_3_3_9_4_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_typesafe_scala_logging_scala_logging_3_3_9_5_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_mariadb_jdbc_mariadb_java_client_3_0_4_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_mariadb_jdbc_mariadb_java_client_3_0_5_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_slf4j_slf4j_api_1_7_32_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/minesweeper-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/minesweeper-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/minesweeper.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/minesweeper.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/persistence/dao/UserDAO.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/persistence/dao/UserDAO.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/persistence/dao/sql/SQLUserDAO.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/persistence/dao/sql/SQLUserDAO.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/persistence/entity/User.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/persistence/entity/User.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/web/command/ErrorCommand.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/web/command/ErrorCommand.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/web/command/NoCommand.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/web/command/NoCommand.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/web/command/RegisterCommand.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/web/command/RegisterCommand.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/web/filter/JWTFilter.scala" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,8 +85,21 @@
   <component name="FindBugs-IDEA-Workspace">
     <toolWindowEditorPreview>false</toolWindowEditorPreview>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://C:/Program Files/Java/jdk-17.0.1/lib/src.zip!/java.base/java/lang/UnsupportedOperationException.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1-sources.jar!/javax/servlet/ServletResponse.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1-sources.jar!/javax/servlet/annotation/WebFilter.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1-sources.jar!/javax/servlet/http/HttpFilter.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -61,26 +108,33 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="29qfgjicKhFh04k37EOSlgCG6Jx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Desktop/Everything for uni/PIS/Scala/Lab2/minesweeper/src/main&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Desktop/Everything for uni/PIS/Scala/Lab2/minesweeper/src/main",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.applicationServers"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mongo&quot;,
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo",
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Desktop\Everything for uni\PIS\Scala\Lab2\minesweeper\src\main" />
@@ -105,11 +159,36 @@
       <option name="presentableId" value="Default" />
       <updated>1653845653085</updated>
       <workItem from="1653845655480" duration="31066000" />
-      <workItem from="1654367427734" duration="7076000" />
+      <workItem from="1654367427734" duration="16497000" />
+      <workItem from="1654971250789" duration="788000" />
+      <workItem from="1654973606120" duration="8939000" />
+      <workItem from="1655116671586" duration="20967000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/web/controller/Controller.scala</url>
+          <line>32</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -10,11 +10,11 @@ val unitTesting = Seq(
 
 val logging = Seq(
     "ch.qos.logback" % "logback-classic" % "1.2.11",
-    "com.typesafe.scala-logging" %% "scala-logging" % "3.9.4"
+    "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5"
 )
 
 val databaseDrivers = Seq(
-    "org.mariadb.jdbc" % "mariadb-java-client" % "3.0.4",
+    "org.mariadb.jdbc" % "mariadb-java-client" % "3.0.5",
     "org.mongodb.scala" % "mongo-scala-driver_2.13" % "4.6.0",
     "org.mongodb.scala" % "mongo-scala-bson_2.13" % "4.6.0"
 )
@@ -32,8 +32,10 @@ libraryDependencies += json
 libraryDependencies += "com.github.jwt-scala" %% "jwt-core" % "9.0.5"
 
 libraryDependencies += "javax.servlet" % "javax.servlet-api" % "4.0.1" % "provided"
+//libraryDependencies += "org.opendaylight.controller.thirdparty" % "org.apache.catalina.filters.CorsFilter" % "7.0.42"
+
 enablePlugins(TomcatPlugin)
-containerPort := 8082
+containerPort := 8084
 
 lazy val root = (project in file("."))
   .settings(

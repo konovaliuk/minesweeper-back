@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="api">
+    <output-path>$PROJECT_DIR$/out/artifacts/api</output-path>
+    <root id="root">
+      <element id="module-source" name="minesweeper" />
+      <element id="module-output" name="minesweeper" />
+    </root>
+  </artifact>
+</component>

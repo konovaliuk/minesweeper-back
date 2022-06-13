@@ -3,6 +3,8 @@ package persistence.dao
 
 import persistence.entity.{ Email, User }
 
+import org.jetbrains.annotations.NotNull
+
 trait UserDAO extends DAO[User, Long] {
     /**
      * Finds the User by his/her username
@@ -19,6 +21,8 @@ trait UserDAO extends DAO[User, Long] {
      * @return Option of User
      */
     def findByEmail(email: Email): Option[User]
-    
+
+    def findByRefreshToken(@NotNull token: String): Option[User]
+
     def findRatingById(id: Long): Option[Long]
 }

@@ -3,3 +3,5 @@
 /project/target/
 /target/
 /target/scala-3.1.2/classes/
+/.idea/runConfigurations/
+/src/main/resources/secrets.properties

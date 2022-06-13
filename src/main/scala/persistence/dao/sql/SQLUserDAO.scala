@@ -6,6 +6,7 @@ import persistence.dao.UserDAO
 import persistence.entity.{ Email, User }
 
 import com.typesafe.scalalogging.Logger
+import edu.mmsa.danikvitek.minesweeper.util.exception.NullRefreshedTokenException
 import org.intellij.lang.annotations.Language
 
 import java.sql.ResultSet
@@ -23,6 +24,7 @@ object SQLUserDAO extends UserDAO {
     private final lazy val COLUMN_EMAIL = "email"
     private final lazy val COLUMN_PASSWORD_HASH = "password_hash"
     private final lazy val COLUMN_SALT = "salt"
+    private final lazy val COLUMN_REFRESH_TOKEN = "refresh_token"
 
     private def extractUserFromRS(rs: ResultSet): User = User.builder
       .withId(rs.getLong(COLUMN_ID))
@@ -30,6 +32,7 @@ object SQLUserDAO extends UserDAO {
       .withEmail(Email(rs.getString(COLUMN_EMAIL)))
       .withPasswordHash(rs.getString(COLUMN_PASSWORD_HASH))
       .withSalt(rs.getString(COLUMN_SALT))
+      .withRefreshToken(rs.getString(COLUMN_REFRESH_TOKEN))
       .build
 
     override def findByEmail(email: Email): Option[User] = {
@@ -51,7 +54,26 @@ object SQLUserDAO extends UserDAO {
         result
     }
 
-    override def findRatingById(id: Long): Option[Long] = ??? // todo: Implement rating fetch
+    override def findRatingById(id: Long): Option[User] = ??? // todo: Implement rating fetch
+
+    override def findByRefreshToken(token: String): Option[User] = {
+        val conn = Await.result(ConnectionPool.startConnection, 0.5.seconds)
+        val ps = conn.prepareStatement(s"select * from $TABLE where $COLUMN_REFRESH_TOKEN = ?;")
+        ps.setString(1, token)
+        val rs = ps.executeQuery()
+
+        val result = if rs.next() then Some {
+            val user = extractUserFromRS(rs)
+            LOGGER info s"Found user by token \"$token\": $user"
+            user
+        }
+        else None
+
+        ps.close()
+        ConnectionPool endConnection conn
+
+        result
+    }
 
     override def findById(id: Long): Option[User] = {
         val conn = Await.result(ConnectionPool.startConnection, 0.5.seconds)
@@ -162,7 +184,8 @@ object SQLUserDAO extends UserDAO {
           s"$COLUMN_USERNAME = ?, " +
           s"$COLUMN_EMAIL = ?, " +
           s"$COLUMN_PASSWORD_HASH = ?, " +
-          s"$COLUMN_SALT = ? " +
+          s"$COLUMN_SALT = ?, " +
+          s"$COLUMN_REFRESH_TOKEN = ? " +
           s"where $COLUMN_ID = ?;"
         val ps = conn.prepareStatement(st)
 
@@ -170,7 +193,10 @@ object SQLUserDAO extends UserDAO {
         ps.setString(2, user.email.value)
         ps.setString(3, user.passwordHash)
         ps.setString(4, user.salt)
-        ps.setLong(5, user.id)
+        ps.setString(5, user.refreshToken.getOrElse(throw new NullRefreshedTokenException(
+            s"New refresh token for user $id is null"
+        )))
+        ps.setLong(6, user.id)
 
         ps.executeUpdate
         LOGGER info s"Updated user: $user"

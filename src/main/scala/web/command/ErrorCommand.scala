@@ -2,7 +2,14 @@ package edu.mmsa.danikvitek.minesweeper
 package web.command
 
 import dto.{ ErrorDto, errorDtoToJson }
-import util.exception.{ IllegalContentTypeException as ICTE, InvalidDtoException as IDE, InvalidEmailException as IEE, UserAlreadyRegisteredException as UARE }
+import util.exception.{
+    IllegalContentTypeException as ICTE,
+    InvalidDtoException as IDE,
+    InvalidEmailException as IEE,
+    UserAlreadyRegisteredException as UARE,
+    IncorrectlyBuiltUserException as IBUE,
+    InvalidRequestException as IRE,
+}
 
 import com.typesafe.scalalogging.Logger
 import little.json.Implicits.jsonValueToJsonObject
@@ -21,6 +28,8 @@ case class ErrorCommand(private val th: Throwable) extends Command {
             case e: UARE => ex400(e, resp)
             case e: IEE => ex400(e, resp)
             case e: UOE => ex400(e, resp)
+            case e: IBUE => ex400(e, resp)
+            case e: IRE => ex400(e, resp)
             case _ => ex500(th, resp)
         LOGGER info s"Sent the error dto: $json"
     }

@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id="root [file:/D:/Desktop/Everything%20for%20uni/PIS/Scala/Lab2/minesweeper/]" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/../../src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/../../src/main/webapp" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/../../src/main/scala" />
+          <root url="file://$MODULE_DIR$/../../src/main/resources" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17">
     <output url="file://$MODULE_DIR$/../../target/scala-3.1.2/classes" />
     <output-test url="file://$MODULE_DIR$/../../target/scala-3.1.2/test-classes" />
@@ -17,11 +33,11 @@
     <orderEntry type="library" name="sbt: ch.qos.logback:logback-core:1.2.11:jar" level="project" />
     <orderEntry type="library" name="sbt: com.github.jwt-scala:jwt-core_3:9.0.5:jar" level="project" />
     <orderEntry type="library" name="sbt: com.github.losizm:little-json_3:9.0.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.typesafe.scala-logging:scala-logging_3:3.9.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.scala-logging:scala-logging_3:3.9.5:jar" level="project" />
     <orderEntry type="library" name="sbt: io.projectreactor:reactor-core:3.2.22.RELEASE:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="sbt: javax.servlet:javax.servlet-api:4.0.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.jetbrains:annotations:23.0.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.mariadb.jdbc:mariadb-java-client:3.0.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.mariadb.jdbc:mariadb-java-client:3.0.5:jar" level="project" />
     <orderEntry type="library" name="sbt: org.mongodb.scala:mongo-scala-bson_2.13:4.6.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.mongodb.scala:mongo-scala-driver_2.13:4.6.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.mongodb:bson-record-codec:4.6.0:jar" level="project" />
@@ -49,6 +65,6 @@
     <orderEntry type="library" scope="TEST" name="sbt: org.scalatest:scalatest-shouldmatchers_3:3.2.12:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: org.scalatest:scalatest-wordspec_3:3.2.12:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: org.scalatest:scalatest_3:3.2.12:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.slf4j:slf4j-api:1.7.32:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.slf4j:slf4j-api:1.7.36:jar" level="project" />
   </component>
 </module>

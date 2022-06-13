@@ -1289,7 +1289,7 @@ y</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="358" parent="341" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>4</AutoIncrement>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1314,28 +1314,42 @@ y</ColNames>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <index id="363" parent="341" name="users_username_uindex">
+    <column id="363" parent="341" name="refresh_token">
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <index id="364" parent="341" name="users_username_uindex">
       <ColNames>username</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="364" parent="341" name="users_email_uindex">
+    <index id="365" parent="341" name="users_email_uindex">
       <ColNames>email</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="365" parent="341" name="PRIMARY">
+    <index id="366" parent="341" name="users_refresh_token_uindex">
+      <ColNames>refresh_token</ColNames>
+      <Type>hash</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="367" parent="341" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <key id="366" parent="341" name="users_username_uindex">
+    <key id="368" parent="341" name="users_username_uindex">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>users_username_uindex</UnderlyingIndexName>
     </key>
-    <key id="367" parent="341" name="users_email_uindex">
+    <key id="369" parent="341" name="users_email_uindex">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_uindex</UnderlyingIndexName>
+    </key>
+    <key id="370" parent="341" name="users_refresh_token_uindex">
+      <ColNames>refresh_token</ColNames>
+      <UnderlyingIndexName>users_refresh_token_uindex</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>
