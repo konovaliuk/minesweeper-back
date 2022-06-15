@@ -4,9 +4,9 @@ package web.command
 import dto.{ EmailDto, jsonToEmailDto, messageDtoToJson, MessageDto as MsgDto }
 import persistence.dao.{ DAOFactory, UserDAO }
 import persistence.entity.Email
+import util.exception.{ IllegalContentTypeException, InvalidDtoException }
 
 import com.typesafe.scalalogging.Logger
-import edu.mmsa.danikvitek.minesweeper.util.exception.{ IllegalContentTypeException, InvalidDtoException }
 import little.json.Implicits.jsonValueToJsonObject
 import little.json.Json
 

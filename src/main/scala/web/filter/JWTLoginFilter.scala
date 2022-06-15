@@ -1,8 +1,8 @@
 package edu.mmsa.danikvitek.minesweeper
 package web.filter
 
-import dto.{ RegistrationDto, jsonToRegistrationDto }
-import util.exception.InvalidRequestException
+import dto.{ LoginDto, jsonToLoginDto }
+import util.exception.{ InvalidDtoException, InvalidRequestException }
 import web.MAYBE_JWT_SECRET
 import web.command.ErrorCommand
 
@@ -16,11 +16,11 @@ import javax.servlet.annotation.WebFilter
 import javax.servlet.http.{ HttpFilter, HttpServletRequest, HttpServletResponse }
 import scala.util.{ Failure, Success, Try }
 
-@WebFilter(urlPatterns = Array("/api/reg"))
-class JWTRegFilter extends HttpFilter {
+@WebFilter(urlPatterns = Array("/api/login"))
+class JWTLoginFilter extends HttpFilter {
     private val LOGGER = Logger(this.getClass)
 
-    LOGGER info "JWTRegFilter created"
+    LOGGER info "JWTLoginFilter created"
 
     override def doFilter(req: HttpServletRequest, res: HttpServletResponse, chain: FilterChain): Unit = {
         LOGGER info s"req: ${req.getRequestURI}"
@@ -29,11 +29,13 @@ class JWTRegFilter extends HttpFilter {
         val token = req.getReader.readLine()
         MAYBE_JWT_SECRET match {
             case Some(secret) => Jwt.decodeRaw(token, secret, Seq(JwtAlgorithm.HS256)) match {
-                case Failure(exception) => LOGGER.error(exception.getMessage, exception)
+                case Failure(exception) => 
+                    LOGGER.error(exception.getMessage, exception)
+                    throw new InvalidDtoException("Invalid login dto")
                 case Success(claim) =>
                     LOGGER info s"claim: $claim"
                     if validMethod && validContentType then
-                        req.setAttribute("dto", Json.parse(claim).as[RegistrationDto])
+                        req.setAttribute("dto", Json.parse(claim).as[LoginDto])
                         LOGGER info s"dto: ${req.getAttribute("dto")}"
                         chain.doFilter(req, res)
                     else ErrorCommand(new InvalidRequestException(

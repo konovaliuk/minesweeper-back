@@ -1267,8 +1267,7 @@ y</ColNames>
       <Position>4</Position>
     </column>
     <column id="354" parent="340" name="state">
-      <DataType>enum(&apos;IN_PROGRESS&apos;, &apos;WON&apos;, &apos;LOST&apos;)|0e</DataType>
-      <DefaultExpression>&apos;IN_PROGRESS&apos;</DefaultExpression>
+      <DataType>enum(&apos;WON&apos;, &apos;LOST&apos;)|0e</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
@@ -1289,7 +1288,7 @@ y</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="358" parent="341" name="id">
-      <AutoIncrement>4</AutoIncrement>
+      <AutoIncrement>6</AutoIncrement>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1316,7 +1315,6 @@ y</ColNames>
     </column>
     <column id="363" parent="341" name="refresh_token">
       <DataType>varchar(1000)|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <index id="364" parent="341" name="users_username_uindex">

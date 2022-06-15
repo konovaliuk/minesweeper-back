@@ -5,9 +5,11 @@ import dto.{ jsonToRegistrationDto, RegistrationDto as RegDto }
 import persistence.dao.DAOFactory
 import persistence.entity.{ Email, User }
 import util.exception.{ IllegalContentTypeException, InvalidDtoException, UserAlreadyRegisteredException }
+import web.MAYBE_JWT_SECRET
 
 import com.typesafe.scalalogging.Logger
 import little.json.Json
+import pdi.jwt.{ Jwt, JwtAlgorithm, JwtClaim, JwtHeader }
 
 import java.nio.charset.Charset
 import javax.servlet.http.{ HttpServletRequest, HttpServletResponse }

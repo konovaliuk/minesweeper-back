@@ -1,6 +1,7 @@
 package edu.mmsa.danikvitek.minesweeper
 package persistence.dao
 
+import dto.RatingEntry
 import persistence.entity.{ Email, User }
 
 import org.jetbrains.annotations.NotNull
@@ -24,5 +25,9 @@ trait UserDAO extends DAO[User, Long] {
 
     def findByRefreshToken(@NotNull token: String): Option[User]
 
-    def findRatingById(id: Long): Option[Long]
+    def findRatingById(id: Long): Option[RatingEntry]
+
+    def count: Long
+
+    def fetchRatings(page: Int, pageSize: Int): List[RatingEntry]
 }

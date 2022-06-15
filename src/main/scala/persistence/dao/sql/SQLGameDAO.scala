@@ -90,8 +90,7 @@ object SQLGameDAO extends GameDAO {
         val state = game.state
         val width = game.width
         val height = game.height
-        val cells = game.cells.get
-        
+
         val conn = Await.result(ConnectionPool.startConnection, 0.5.seconds)
         @Language("MariaDB") val st =
             s"insert into $TABLE ($COLUMN_USER_ID, $COLUMN_GAME_STATE, $COLUMN_WIDTH, $COLUMN_HEIGHT) value(?, ?, ?, ?);"
@@ -100,29 +99,51 @@ object SQLGameDAO extends GameDAO {
         ps.setString(2, state.toString)
         ps.setByte(3, width)
         ps.setByte(4, height)
-        
-        val savingGame = Game.builder
-          .withWidth(width)
-          .withHeight(height)
-          .withCells(cells)
-          .withUserId(userId)
-          .withGameSate(state)
 
         ps.executeUpdate()
 
         ps.close()
         ConnectionPool endConnection conn
 
+        val gameId = this.findLastByUser(userId).get.id
+        val cells = game.cells.get.map(_.copy(gameId = gameId))
+        LOGGER info s"cells: $cells"
+
         if cells.sizeIs > 0 then cellsDAO.saveAll(cells)
 
-        LOGGER info s"Saved game: $game"
-        
-        savingGame
-          .withId(findLastByUser(userId).get.id)
+        Game.builder
+          .withId(gameId)
+          .withWidth(width)
+          .withHeight(height)
+          .withCells(cells)
+          .withUserId(userId)
+          .withGameSate(state)
           .build
     }
 
-    override def findLastByUser(userId: Long): Option[Game] = ???
+    override def findLastByUser(userId: Long): Option[Game] = {
+        val conn = Await.result(ConnectionPool.startConnection, 0.5.seconds)
+        @Language("MariaDB") val st = s"select * from $TABLE " +
+          s"where $COLUMN_USER_ID = ? and $COLUMN_ID = ( " +
+          s"    select max($COLUMN_ID) from $TABLE where $COLUMN_USER_ID = ? " +
+          s");"
+        val ps = conn.prepareStatement(st)
+        ps.setLong(1, userId)
+        ps.setLong(2, userId)
+        val rs = ps.executeQuery()
+
+        val result = if rs.next() then Some {
+            val game = extractGameFromRS(rs)
+            LOGGER info s"Found last game by user_id $userId: $game"
+            game
+        }
+        else None
+
+        ps.close()
+        ConnectionPool endConnection conn
+
+        result
+    }
 
     @throws[IllegalArgumentException]("If the game id is null")
     override def update(game: Game): Game = {
@@ -136,11 +157,11 @@ object SQLGameDAO extends GameDAO {
         ps.executeUpdate()
         ps.close()
         ConnectionPool endConnection conn
-        
-        cellsDAO.updateAll(game.cells.get)        
-        
+
+        cellsDAO.updateAll(game.cells.get)
+
         LOGGER info s"Updated game: $game"
-        
+
         game
     }
 

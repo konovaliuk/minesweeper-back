@@ -32,7 +32,6 @@ libraryDependencies += json
 libraryDependencies += "com.github.jwt-scala" %% "jwt-core" % "9.0.5"
 
 libraryDependencies += "javax.servlet" % "javax.servlet-api" % "4.0.1" % "provided"
-//libraryDependencies += "org.opendaylight.controller.thirdparty" % "org.apache.catalina.filters.CorsFilter" % "7.0.42"
 
 enablePlugins(TomcatPlugin)
 containerPort := 8084

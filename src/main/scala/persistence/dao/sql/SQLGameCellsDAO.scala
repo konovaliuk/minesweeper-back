@@ -28,11 +28,11 @@ object SQLGameCellsDAO extends DAO[Cell, CellPK] {
 
     override def findAll: List[Cell] = throw new UnsupportedOperationException(UOE_MSG)
 
-    override def save(entity: Cell): Cell = throw new UnsupportedOperationException(UOE_MSG)
-
     override def update(entity: Cell): Cell = throw new UnsupportedOperationException(UOE_MSG)
 
     override def delete(id: CellPK): Unit = throw new UnsupportedOperationException(UOE_MSG)
+
+    override def save(cell: Cell): Cell = throw new UnsupportedOperationException(UOE_MSG)
 
     def findAllByGameId(gameId: Long): List[Cell] = {
         val conn = Await.result(ConnectionPool.startConnection, 0.5.seconds)

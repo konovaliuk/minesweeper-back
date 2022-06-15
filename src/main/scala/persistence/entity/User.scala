@@ -1,7 +1,8 @@
 package edu.mmsa.danikvitek.minesweeper
 package persistence.entity
 
-import edu.mmsa.danikvitek.minesweeper.util.exception.IncorrectlyBuiltUserException
+import util.exception.IncorrectlyBuiltUserException
+
 import org.jetbrains.annotations.{ NotNull, Nullable }
 
 import java.nio.charset.Charset
@@ -58,7 +59,7 @@ private class UserBuilder {
         this.salt = Random.alphanumeric.take(8).foldLeft("")(_ + _)
         val md = MessageDigest.getInstance("SHA-256")
         md.update((password + this.salt).getBytes(Charset.forName("UTF-8")))
-        this.passwordHash = String(md.digest());
+        this.passwordHash = String(md.digest())
         this
     }
 

@@ -9,35 +9,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00dab508-48ae-480a-abac-622134fd1086" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/api.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_slf4j_slf4j_api_1_7_36_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/9/79326266ba3ce9551030824986203187a03dba28" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/88183f55db7e754f89d0d25ef0756a3ed4db4fe2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b11dc4e4017663b4db77a98e5fd2d486e7f21379" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/util/exception/InvalidRequestException.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/util/exception/NullRefreshedTokenException.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/web/filter/JWTRegFilter.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="00dab508-48ae-480a-abac-622134fd1086" name="Changes" comment="Resolved issue with front-end. Lab2 pre-release">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/dto/CellDto.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/dto/GameStateDto.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/dto/LoginDto.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/dto/RatingEntry.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/dto/RatingPageRequestDto.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/util/exception/BackendSecretNotSetError.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/util/exception/InvalidCredentialsException.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/util/exception/InvalidTokenException.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/util/exception/UserNotFoundException.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/web/command/FetchUsernameCommand.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/web/command/InvalidateAccessCommand.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/web/command/LogInCommand.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/web/command/RatingPageCommand.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/web/command/RefreshLoginCommand.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/web/command/SaveGameCommand.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/web/command/TotalUsersCommand.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/web/command/UserRatingCommand.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/web/command/ValidateLoginCommand.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/web/filter/JWTLoginFilter.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/web/package.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/14c1554e-d60d-4c6c-9ec6-0248d7a72d5f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/14c1554e-d60d-4c6c-9ec6-0248d7a72d5f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_typesafe_scala_logging_scala_logging_3_3_9_4_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_typesafe_scala_logging_scala_logging_3_3_9_5_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_mariadb_jdbc_mariadb_java_client_3_0_4_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_mariadb_jdbc_mariadb_java_client_3_0_5_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_slf4j_slf4j_api_1_7_32_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/minesweeper-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/minesweeper-build.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/minesweeper.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/minesweeper.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/88183f55db7e754f89d0d25ef0756a3ed4db4fe2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/persistence/dao/UserDAO.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/persistence/dao/UserDAO.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/persistence/dao/mongo/MongoUserDAO.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/persistence/dao/mongo/MongoUserDAO.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/persistence/dao/sql/SQLGameCellsDAO.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/persistence/dao/sql/SQLGameCellsDAO.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/persistence/dao/sql/SQLGameDAO.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/persistence/dao/sql/SQLGameDAO.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/persistence/dao/sql/SQLUserDAO.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/persistence/dao/sql/SQLUserDAO.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/persistence/entity/Game.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/persistence/entity/Game.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/persistence/entity/GameState.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/persistence/entity/GameState.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/persistence/entity/User.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/persistence/entity/User.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/web/command/CheckEmailCommand.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/web/command/CheckEmailCommand.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/web/command/Command.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/web/command/Command.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/web/command/ErrorCommand.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/web/command/ErrorCommand.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/web/command/NoCommand.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/web/command/NoCommand.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/web/command/RegisterCommand.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/web/command/RegisterCommand.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/web/filter/JWTFilter.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/web/controller/Controller.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/web/controller/Controller.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/web/controller/ControllerHelper.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/web/controller/ControllerHelper.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/web/filter/JWTRegFilter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/web/filter/JWTRegFilter.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,13 +92,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Package Object" />
         <option value="Class" />
+        <option value="Package Object" />
       </list>
     </option>
-  </component>
-  <component name="FindBugs-IDEA-Workspace">
-    <toolWindowEditorPreview>false</toolWindowEditorPreview>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -115,23 +127,24 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Desktop/Everything for uni/PIS/Scala/Lab2/minesweeper/src/main",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.applicationServers"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Desktop/Everything for uni/PIS/Scala/Lab2/minesweeper/src/main&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.applicationServers&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo",
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;,
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -147,6 +160,7 @@
       <recent name="D:\Desktop\Everything for uni\PIS\Scala\Lab2\minesweeper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.mmsa.danikvitek.minesweeper.web.filter" />
       <recent name="edu.mmsa.danikvitek.minesweeper" />
     </key>
   </component>
@@ -162,8 +176,17 @@
       <workItem from="1654367427734" duration="16497000" />
       <workItem from="1654971250789" duration="788000" />
       <workItem from="1654973606120" duration="8939000" />
-      <workItem from="1655116671586" duration="20967000" />
+      <workItem from="1655116671586" duration="34743000" />
+      <workItem from="1655217947593" duration="47882000" />
     </task>
+    <task id="LOCAL-00001" summary="Resolved issue with front-end. Lab2 pre-release">
+      <created>1655161836942</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655161836942</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,15 +203,8 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/main/scala/web/controller/Controller.scala</url>
-          <line>32</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Resolved issue with front-end. Lab2 pre-release" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolved issue with front-end. Lab2 pre-release" />
   </component>
 </project>

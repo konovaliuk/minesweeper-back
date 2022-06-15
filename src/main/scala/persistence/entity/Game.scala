@@ -135,8 +135,8 @@ object Game {
             else if cells.sizeIs > width * height then throw new IllegalArgumentException("Cells list is too long")
             val coords = cells.map(c => (c.x, c.y))
             for {
-                x <- 0 to width
-                y <- 0 to height
+                x <- 0 until width
+                y <- 0 until height
             } {
                 if !coords.contains((x, y)) then throw new IllegalArgumentException("Invalid list contents")
             }
